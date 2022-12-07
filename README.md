@@ -35,11 +35,11 @@ Alpine.start()
 ## Example
 
 ```html
-<div id="targetEL" class="bg-black w-64 h-64"></div>
+<div id="targetEl" class="bg-black w-64 h-64"></div>
 
 <div
-  x-data="{ isOverlap: $overlap('#targetEL') }"
-  x-on:resize.window="isOverlap = $overlap('#targetEL')"
+  x-data="{ isOverlap: $overlap('#targetEl') }"
+  x-on:resize.window="isOverlap = $overlap('#targetEl')"
   :class="{ 'bg-blue-500': isOverlap, 'bg-red-500': !isOverlap }"
   class="absolute w-48 h-48 top-16 right-16"
 ></div>
