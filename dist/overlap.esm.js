@@ -1,0 +1,1 @@
+function o(r){r.magic("overlap",(t,{})=>e=>{let l=document.querySelector(e);return c(l.getBoundingClientRect(),t.getBoundingClientRect())});function c(t,e){return!(t.top>e.bottom||t.right<e.left||t.bottom<e.top||t.left>e.right)}}var m=o;export{m as default};

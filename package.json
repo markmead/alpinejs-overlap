@@ -1,15 +1,18 @@
 {
-  "name": "PLUGIN",
+  "name": "alpinejs-overlap",
   "version": "1.0.0",
-  "description": "Description of the plugin",
+  "description": "Check if an element is overlapping another 🥞",
   "keywords": [
     "Alpine",
     "Alpine JS",
     "Alpine JS Plugin",
-    "Alpine JS Plugins"
+    "Alpine JS Plugins",
+    "Alpine JS Overlap",
+    "JavaScript Overlap",
+    "Overlapping Elements"
   ],
-  "module": "dist/FILE.esm.js",
-  "unpkg": "dist/FILE.min.js",
+  "module": "dist/overlap.esm.js",
+  "unpkg": "dist/overlap.min.js",
   "scripts": {
     "build": "node scripts/build.js"
   },
