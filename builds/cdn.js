@@ -1,5 +1,3 @@
 import overlap from '../src/index.js'
 
-document.addEventListener('alpine:init', () => {
-  window.Alpine.plugin(overlap)
-})
+document.addEventListener('alpine:init', () => window.Alpine.plugin(overlap))
