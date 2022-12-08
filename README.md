@@ -36,11 +36,11 @@ Alpine.start()
 
 ```html
 <div class="relative">
-  <div id="targetEl" class="w-32 h-32 bg-teal-700 rounded-lg"></div>
+  <div id="TargetEl" class="w-32 h-32 bg-teal-700 rounded-lg"></div>
 
   <div
-    x-data="{ isOverlap: $overlap('#targetEl') }"
-    x-on:resize.window="isOverlap = $overlap('#targetEl')"
+    x-data="{ isOverlap: $overlap('#TargetEl') }"
+    x-on:resize.window="isOverlap = $overlap('#TargetEl')"
     :class="{ 'bg-red-700': isOverlap, 'bg-teal-700': !isOverlap }"
     class="absolute inset-y-0 right-0 grid w-32 h-32 rounded-lg place-content-center"
   >
