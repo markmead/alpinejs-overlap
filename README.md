@@ -35,18 +35,28 @@ Alpine.start()
 ## Example
 
 ```html
-<div id="targetEl" class="bg-black w-64 h-64"></div>
+<div class="relative">
+  <div id="targetEl" class="w-32 h-32 bg-teal-700 rounded-lg"></div>
 
-<div
-  x-data="{ isOverlap: $overlap('#targetEl') }"
-  x-on:resize.window="isOverlap = $overlap('#targetEl')"
-  :class="{ 'bg-blue-500': isOverlap, 'bg-red-500': !isOverlap }"
-  class="absolute w-48 h-48 top-16 right-16"
-></div>
+  <div
+    x-data="{ isOverlap: $overlap('#targetEl') }"
+    x-on:resize.window="isOverlap = $overlap('#targetEl')"
+    :class="{ 'bg-red-700': isOverlap, 'bg-teal-700': !isOverlap }"
+    class="absolute inset-y-0 right-0 grid w-32 h-32 rounded-lg place-content-center"
+  >
+    <p
+      x-text="isOverlap ? 'Overlapping' : 'Will Overlap'"
+      class="text-sm font-medium text-white"
+    ></p>
+  </div>
+</div>
 ```
 
 In this example we check for an initial overlap and then use Alpine JS
-`resize.window` listener to check on resize.
+`resize.window` listener to check while resizing the window.
+
+See the example in action on
+[Check Elements are Overlapping - HyperJS](https://js.hyperui.dev/components/check-overlapping-element).
 
 ## Stats
 

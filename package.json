@@ -1,6 +1,6 @@
 {
   "name": "alpinejs-overlap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check if an element is overlapping another 🥞",
   "keywords": [
     "Alpine",
