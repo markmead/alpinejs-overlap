@@ -2,18 +2,18 @@ export default function (Alpine) {
   Alpine.magic('overlap', (el, {}) => (targetId) => {
     const targetEl = document.querySelector(targetId)
 
-    return checkOverlap(
-      targetEl.getBoundingClientRect(),
-      el.getBoundingClientRect()
-    )
-  })
+    if (!targetEl) {
+      return false
+    }
 
-  function checkOverlap(targetBounding, elBounding) {
+    const elBounding = el.getBoundingClientRect()
+    const targetBounding = targetEl.getBoundingClientRect()
+
     return !(
       targetBounding.top > elBounding.bottom ||
       targetBounding.right < elBounding.left ||
       targetBounding.bottom < elBounding.top ||
       targetBounding.left > elBounding.right
     )
-  }
+  })
 }
