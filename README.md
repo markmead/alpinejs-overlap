@@ -1,6 +1,7 @@
 # Alpine JS Overlap
 
-> [!IMPORTANT] This plugin is no longer maintained or supported.
+> [!IMPORTANT] 
+> This plugin is no longer maintained or supported.
 
 ![](https://img.shields.io/bundlephobia/min/alpinejs-overlap)
 ![](https://img.shields.io/npm/v/alpinejs-overlap)
