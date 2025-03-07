@@ -1,11 +1,11 @@
 buildPlugin({
   entryPoints: ['builds/cdn.js'],
-  outfile: 'dist/overlap.min.js',
+  outfile: 'dist/cdn.min.js',
 })
 
 buildPlugin({
   entryPoints: ['builds/module.js'],
-  outfile: 'dist/overlap.esm.js',
+  outfile: 'dist/esm.min.js',
   platform: 'neutral',
   mainFields: ['main', 'module'],
 })

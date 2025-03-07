@@ -1,25 +1,43 @@
 # Alpine JS Overlap
 
-Check if an element is overlapping another 🥞
+![](https://img.shields.io/bundlephobia/min/alpinejs-overlap)
+![](https://img.shields.io/npm/v/alpinejs-overlap)
+![](https://img.shields.io/npm/dt/alpinejs-overlap)
+![](https://img.shields.io/github/license/markmead/alpinejs-overlap)
+
+A lightweight Alpine JS plugin that adds an `$overlap()` utility to detect when
+DOM elements overlap each other.
+
+## What It Does
+
+- Adds global `$overlap()` method that returns `true` or `false` if elements
+  overlap
+- Simple API: `$overlap('#targetElement')`
+
+## Why Use It
+
+- Create UI components that react to element overlaps
+- Build drag-and-drop interfaces
+- Position tooltips/dropdowns to avoid collisions
+- Implement simple collision detection for interactive elements
 
 ## Install
 
-### With a CDN
+### CDN
 
 ```html
 <script
   defer
-  src="https://unpkg.com/alpinejs-overlap@latest/dist/overlap.min.js"
+  src="https://unpkg.com/alpinejs-overlap@latest/dist/cdn.min.js"
 ></script>
 
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
 ```
 
-### With a Package Manager
+### Package
 
 ```shell
 yarn add -D alpinejs-overlap
-
 npm install -D alpinejs-overlap
 ```
 
@@ -36,31 +54,15 @@ Alpine.start()
 
 ```html
 <div class="relative">
-  <div id="TargetEl" class="w-32 h-32 bg-teal-700 rounded-lg"></div>
+  <div id="TargetEl" class="size-32 bg-gray-900"></div>
 
   <div
-    x-data="{ isOverlap: $overlap('#TargetEl') }"
-    x-on:resize.window="isOverlap = $overlap('#TargetEl')"
-    :class="{ 'bg-red-700': isOverlap, 'bg-teal-700': !isOverlap }"
-    class="absolute inset-y-0 right-0 grid w-32 h-32 rounded-lg place-content-center"
+    x-data="{ elementsAreOverlapping: $overlap('#TargetEl') }"
+    :class="{ 'bg-green-700': elementsAreOverlapping, 'bg-gray-900': !elementsAreOverlapping }"
+    class="absolute inset-y-0 right-0 size-32"
+    @resize.window="elementsAreOverlapping = $overlap('#TargetEl')"
   >
-    <p
-      x-text="isOverlap ? 'Overlapping' : 'Will Overlap'"
-      class="text-sm font-medium text-white"
-    ></p>
+    <p x-text="elementsAreOverlapping ? 'Overlapping' : 'Will Overlap'"></p>
   </div>
 </div>
 ```
-
-In this example we check for an initial overlap and then use Alpine JS
-`resize.window` listener to check while resizing the window.
-
-See the example in action on
-[Check Elements are Overlapping - HyperJS](https://js.hyperui.dev/components/check-overlapping-element).
-
-## Stats
-
-![](https://img.shields.io/bundlephobia/min/alpinejs-overlap)
-![](https://img.shields.io/npm/v/alpinejs-overlap)
-![](https://img.shields.io/npm/dt/alpinejs-overlap)
-![](https://img.shields.io/github/license/markmead/alpinejs-overlap)
