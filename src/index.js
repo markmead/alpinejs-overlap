@@ -6,8 +6,8 @@ export default function (Alpine) {
       return false
     }
 
-    const targetBounding = targetEl.getBoundingClientRect()
     const elBounding = el.getBoundingClientRect()
+    const targetBounding = targetEl.getBoundingClientRect()
 
     return !(
       targetBounding.top > elBounding.bottom ||

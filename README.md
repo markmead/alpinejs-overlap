@@ -1,6 +1,6 @@
 # Alpine JS Overlap
 
-> [!IMPORTANT]
+> [!IMPORTANT] 
 > This plugin is no longer maintained or supported.
 
 ![](https://img.shields.io/bundlephobia/min/alpinejs-overlap)
@@ -57,15 +57,15 @@ Alpine.start()
 
 ```html
 <div class="relative">
-  <div id="TargetEl" class="size-32 bg-gray-900"></div>
+  <div id="TargetEl" class="size-96 top-8 bg-gray-900"></div>
 
   <div
     x-data="{ elementsAreOverlapping: $overlap('#TargetEl') }"
     :class="{ 'bg-green-700': elementsAreOverlapping, 'bg-gray-900': !elementsAreOverlapping }"
-    class="absolute inset-y-0 right-0 size-32"
+    class="absolute inset-y-0 right-0 size-96 grid place-content-center text-white"
     @resize.window="elementsAreOverlapping = $overlap('#TargetEl')"
   >
-    <p x-text="elementsAreOverlapping ? 'Overlapping' : 'Will Overlap'"></p>
+    <p x-text="elementsAreOverlapping ? 'Overlapping' : 'Not Overlapping'"></p>
   </div>
 </div>
 ```
