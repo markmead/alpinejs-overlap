@@ -1,6 +1,6 @@
 {
   "name": "alpinejs-overlap",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Alpine JS magic helper that determines when elements overlap or intersect each other, perfect for menus, tooltips, modals, and collision detection 🥞",
   "keywords": [
     "alpine",

@@ -1,7 +1,6 @@
 # Alpine JS Overlap
 
-> [!IMPORTANT] 
-> This plugin is no longer maintained or supported.
+> [!IMPORTANT] This plugin is no longer maintained or supported.
 
 ![](https://img.shields.io/bundlephobia/min/alpinejs-overlap)
 ![](https://img.shields.io/npm/v/alpinejs-overlap)
@@ -10,8 +9,6 @@
 
 A lightweight Alpine JS plugin that adds an `$overlap()` utility to detect when
 DOM elements overlap each other.
-
-## What It Does
 
 ## What It Does
 
