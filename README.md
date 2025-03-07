@@ -13,9 +13,12 @@ DOM elements overlap each other.
 
 ## What It Does
 
-- Adds global `$overlap()` method that returns `true` or `false` if elements
-  overlap
-- Simple API: `$overlap('#targetElement')`
+## What It Does
+
+- 🔍 Provides a global `$overlap()` method that returns `true` or `false` when
+  checking if elements intersect
+- 🧩 Simple to use API by calling `$overlap('#targetElement')` to detect element
+  intersections
 
 ## Why Use It
 
